@@ -72,7 +72,10 @@ class _RunDialogueState extends State<RunDialogue> {
                       padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.greenAccent,
+                          color: isDetective
+                              ? Colors.grey[300]
+                              : Color(int.parse(
+                                  "0xff${gameManager.characters[charIndex].color.value}")),
                           borderRadius: BorderRadius.all(Radius.circular(19)),
                         ),
                         margin: isDetective

@@ -9,11 +9,11 @@
         <type>typ rozhovoru: case(úvod případu), default(první rozhovor s osobou), pp(persoun about person), pi(person about item)</type>
         <asker>koho se detektiv ptá</asker>
         <subject>id osoby (pp) nebo předmětu(pi) na který se detektiv ptá</subject>
-        <text>0:Samotný text</text>
-        <text>999:Samotný text</text>
-        <text>0:Samotný text</text>
-        <text>0:Samotný text</text>
-        <text>999:Samotný text</text>
+        <text>0:Ahoj</text>
+        <text>999:Ahoj, jak se máš?</text>
+        <text>0:Super!</text>
+        <text>0:Ty?</text>
+        <text>999:Taky super!</text>
         <revealed>truefalse jestli už byly předměty revealed</revealed>
         <toReveal>'lokace/osoba/item':list, co by se hráči po ukončení dialogu mělo zobrazit.</toReveal>
     </dialogue>

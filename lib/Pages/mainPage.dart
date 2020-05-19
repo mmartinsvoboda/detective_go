@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:detectivego/gameManager.dart' as gameManager;
 
 import 'runDialogue.dart';
+import 'mapPage.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -16,31 +18,43 @@ class _MainPageState extends State<MainPage> {
           title: Center(child: Text("Main Page list".toUpperCase())),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MapPage(),
+                        ));
+                  },
+                  child: Card(
+                    child: Container(
+                        height: 50, child: Center(child: Text("Mapa"))),
+                  )),
+            ),
             Expanded(
               child: ListView.builder(
                   itemCount: gameManager.characters.length,
                   itemBuilder: (context, index) {
-                    if (!gameManager.characters[index].jmeno.isKnown) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Card(
-                          child: Container(
-                              height: 50,
-                              child: Center(
-                                child: Text(
-                                  gameManager.characters[index].jmeno.value,
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontStyle: FontStyle.normal,
-                                  ),
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Card(
+                        child: Container(
+                            height: 50,
+                            child: Center(
+                              child: Text(
+                                gameManager.characters[index].jmeno.value,
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontStyle: FontStyle.normal,
                                 ),
-                              )),
-                        ),
-                      );
-                    } else {
-                      return SizedBox();
-                    }
+                              ),
+                            )),
+                      ),
+                    );
                   }),
             ),
             Expanded(

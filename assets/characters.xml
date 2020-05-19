@@ -8,8 +8,8 @@
         <!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
         <zakladniudaje>
             <fotka isKnown='False' odpoved=''>fotka.jpg</fotka>
-            <jmeno isKnown='False' odpoved=''>jmeno</jmeno>
-            <prijmeni isKnown='False' odpoved=''>prijmeni</prijmeni>
+            <jmeno isKnown='False' odpoved=''>Simona</jmeno>
+            <prijmeni isKnown='False' odpoved=''>Žídková</prijmeni>
             <prezdivka isKnown='False' odpoved=''>prezdivka</prezdivka>
             <pohlavi isKnown='False' odpoved=''>pohlavi</pohlavi>
             <datumnarozeni isKnown='False' odpoved=''>datumnarozeni</datumnarozeni>
@@ -42,7 +42,7 @@
         <!-- Data ke hře. Hráč k nim nemá přístup -->
         <!---->
         <data>
-            <color isKnown='False' odpoved=''>barva chatu</color>
+            <color isKnown='False' odpoved=''>a5d6a7</color>
             <jeObet isKnown='False' odpoved=''>jeObet</jeObet>
             <jeHledanaOsoba isKnown='False' odpoved=''>jeHledanaOsoba</jeHledanaOsoba>
             <!---->
