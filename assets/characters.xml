@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!-- Každá položka je typu položka ve tvaru [var value, bool isKnown, string komentar]-->
+<!--  isKnown='' odpoved='' -->
+<osoby>
+    <osoba>
+        <!-- ID osoby -->
+        <id>id=0</id>
+        <!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
+        <zakladniudaje>
+            <fotka isKnown='False' odpoved=''>fotka.jpg</fotka>
+            <jmeno isKnown='False' odpoved=''>jmeno</jmeno>
+            <prijmeni isKnown='False' odpoved=''>prijmeni</prijmeni>
+            <prezdivka isKnown='False' odpoved=''>prezdivka</prezdivka>
+            <pohlavi isKnown='False' odpoved=''>pohlavi</pohlavi>
+            <datumnarozeni isKnown='False' odpoved=''>datumnarozeni</datumnarozeni>
+            <jeNazivu isKnown='False' odpoved=''>jeNazivu</jeNazivu>
+            <datumumrti isKnown='False' odpoved=''>datumumrti</datumumrti>
+            <narodnost isKnown='False' odpoved=''>narodnost</narodnost>
+            <vyska isKnown='False' odpoved=''>vyska</vyska>
+            <vaha isKnown='False' odpoved=''>vaha</vaha>
+            <mobil isKnown='False' odpoved=''>mobil</mobil>
+            <povolani isKnown='False' odpoved=''>povolani</povolani>
+            <vztahKuObeti isKnown='False' odpoved=''>vztahKuObeti</vztahKuObeti>
+        </zakladniudaje>
+        <!-- Udaje zjistene resenim pripadu -->
+        <udajekpripadu>
+            <otiskprstu isKnown='False' odpoved=''>otiskprstu.jpg</otiskprstu>
+            <DNA isKnown='False' odpoved=''>dna.jpg</DNA>
+            <alibi isKnown='False' odpoved=''>alibi</alibi>
+            <jeSvedek isKnown='False' odpoved=''>jeSvedek</jeSvedek>
+        </udajekpripadu>
+        <!---->
+        <!-- Hrac si muze vsechny osoby v pripadu zaradit do ruznych kategorii pro lepsi orientaci v pripadu -->
+        <!---->
+        <stav>
+            <jeZnamy isKnown='False' odpoved=''>True</jeZnamy>
+            <jeHlavniPodezrely isKnown='False' odpoved=''>jeHlavniPodezrely</jeHlavniPodezrely>
+            <jePodezrely isKnown='False' odpoved=''>jePodezrely</jePodezrely>
+            <jeNevinny isKnown='False' odpoved=''>jeNevinny</jeNevinny>
+        </stav>
+        <!---->
+        <!-- Data ke hře. Hráč k nim nemá přístup -->
+        <!---->
+        <data>
+            <color isKnown='False' odpoved=''>barva chatu</color>
+            <jeObet isKnown='False' odpoved=''>jeObet</jeObet>
+            <jeHledanaOsoba isKnown='False' odpoved=''>jeHledanaOsoba</jeHledanaOsoba>
+            <!---->
+            <!-- Pokud se bude hráč špatně ptát, osoba se může naštvat a odmítne komunikovat na nějakou dobu. -->
+            <!---->
+            <status>
+                <trpelivost isKnown='False' odpoved=''>100</trpelivost>
+            </status>
+        </data>
+        <!---->
+        <!-- Přehled lokací, kde může hráč osobu najít -->
+        <!---->
+        <Lokace>
+            <lokace isKnown='False' odpoved=''>lokace1</lokace>
+        </Lokace>
+        <!---->
+        <!-- Popis osoby ostatními osobami. Pokud bude prázdné, osoba danou osobu není známa -->
+        <!---->
+        <popisOdOstatnich>
+            <popis id='1' isKnown='False' odpoved=''>popis</popis>
+            <popis id='2' isKnown='False' odpoved=''>popis</popis>
+        </popisOdOstatnich>
+    </osoba>
+</osoby>

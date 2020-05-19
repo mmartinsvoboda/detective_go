@@ -1,0 +1,13 @@
+import 'package:flutter/material.dart';
+// Pages
+import 'package:detectivego/Pages/loading.dart';
+import 'package:detectivego/Pages/mapPage.dart';
+import 'package:detectivego/Pages/mainPage.dart';
+
+void main() {
+  runApp(MaterialApp(initialRoute: '/', routes: {
+    '/': (context) => Loading(),
+    '/home': (context) => MainPage(),
+    //'/location': (context) => ChooseLocation(),
+  }));
+}
