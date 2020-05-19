@@ -10,7 +10,7 @@ class RunDialogue extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Text(dialogue.text.toString()),
+        child: Text(dialogue.text[0]),
       ),
     );
   }
