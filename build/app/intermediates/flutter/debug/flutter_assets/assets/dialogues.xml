@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<dialogues>
+    <dialogue>
+        <!-- ID dialogu -->
+        <id>id=0</id>
+        <description>krátký popis dialogu</description>
+        <beenTold>truefalse jestli už byl přehraný</beenTold>
+        <assign>character id postavy, ke které se přiřadí text</assign>
+        <assign>character id postavy, ke které se přiřadí text</assign>
+        <type>typ rozhovoru: case(úvod případu), default(první rozhovor s osobou), pp(persoun about person), pi(person about item)</type>
+        <asker>koho se detektiv ptá</asker>
+        <subject>id osoby (pp) nebo předmětu(pi) na který se detektiv ptá</subject>
+        <text charid='id mluvícího'>Samotný text</text>
+        <revealed>truefalse jestli už byly předměty revealed</revealed>
+        <toReveal type='lokace/osoba/item'>list, co by se hráči po ukončení dialogu mělo zobrazit.</toReveal>
+    </dialogue>
+</dialogues>

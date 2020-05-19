@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<items>
+    <item>
+        <!-- ID itemu -->
+        <id>0</id>
+        <isKnown>true</isKnown>
+        <name>jeden</name>
+        <pic>picture</pic>
+        <description>description</description>
+        <text>text</text>
+        <defanswer>default answer</defanswer>
+        <isNote>isNote</isNote>
+        <notetext>noteText</notetext>
+    </item>
+    <item>
+        <!-- ID itemu -->
+        <id>1</id>
+        <isKnown>true</isKnown>
+        <name>dva</name>
+        <pic>picture</pic>
+        <description>description</description>
+        <text>text</text>
+        <defanswer>default answer</defanswer>
+        <isNote>isNote</isNote>
+        <notetext>noteText</notetext>
+    </item>
+</items>

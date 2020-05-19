@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<locations>
+    <location>
+        <!-- ID lokace -->
+        <id>id=0</id>
+        <isKnown>isKnown</isKnown>
+        <name>lokace jedna</name>
+        <description>description</description>
+        <lat>lat</lat>
+        <long>long</long>
+        <keyword>keyword1</keyword>
+        <keyword>keyword2</keyword>
+        <keyword>keyword3</keyword>
+        <keyword>keyword4</keyword>
+        <keyword>keyword5</keyword>
+        <character>character1</character>
+        <character>character2</character>
+        <character>character3</character>
+    </location>
+    <location>
+        <!-- ID lokace -->
+        <id>id=0</id>
+        <isKnown>isKnown</isKnown>
+        <name>lokace 2</name>
+        <description>description</description>
+        <lat>lat</lat>
+        <long>long</long>
+        <keyword></keyword>
+        <keyword>auto</keyword>
+        <character>character4</character>
+        <character>character5</character>
+        <character>character6</character>
+    </location>
+</locations>
