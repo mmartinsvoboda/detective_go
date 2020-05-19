@@ -6,7 +6,7 @@ class Character {
       _jmeno,
       _prijmeni,
       _prezdivka,
-      _pohlavi,
+      _man,
       _datumnarozeni,
       _jeNazivu,
       _datumumrti,
@@ -40,7 +40,7 @@ class Character {
       this._jmeno,
       this._prijmeni,
       this._prezdivka,
-      this._pohlavi,
+      this._man,
       this._datumnarozeni,
       this._jeNazivu,
       this._datumumrti,
@@ -73,7 +73,7 @@ class Character {
 
   get prezdivka => this._prezdivka;
 
-  get pohlavi => this._pohlavi;
+  get man => this._man;
 
   get datumnarozeni => this._datumnarozeni;
 

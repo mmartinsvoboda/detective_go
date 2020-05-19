@@ -33,7 +33,7 @@ Future<Character> createCharacter(xml.XmlElement person) async {
       await createCharAttribute(person, "jmeno"),
       await createCharAttribute(person, "prijmeni"),
       await createCharAttribute(person, "prezdivka"),
-      await createCharAttribute(person, "pohlavi"),
+      await createCharAttribute(person, "man"),
       await createCharAttribute(person, "datumnarozeni"),
       await createCharAttribute(person, "jeNazivu"),
       await createCharAttribute(person, "datumumrti"),

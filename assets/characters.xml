@@ -1,69 +1,435 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Každá položka je typu položka ve tvaru [var value, bool isKnown, string komentar]-->
 <!--  isKnown='' odpoved='' -->
 <osoby>
-    <osoba>
-        <!-- ID osoby -->
-        <id>id=0</id>
-        <!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
-        <zakladniudaje>
-            <fotka isKnown='False' odpoved=''>fotka.jpg</fotka>
-            <jmeno isKnown='False' odpoved=''>Simona</jmeno>
-            <prijmeni isKnown='False' odpoved=''>Žídková</prijmeni>
-            <prezdivka isKnown='False' odpoved=''>prezdivka</prezdivka>
-            <pohlavi isKnown='False' odpoved=''>pohlavi</pohlavi>
-            <datumnarozeni isKnown='False' odpoved=''>datumnarozeni</datumnarozeni>
-            <jeNazivu isKnown='False' odpoved=''>jeNazivu</jeNazivu>
-            <datumumrti isKnown='False' odpoved=''>datumumrti</datumumrti>
-            <narodnost isKnown='False' odpoved=''>narodnost</narodnost>
-            <vyska isKnown='False' odpoved=''>vyska</vyska>
-            <vaha isKnown='False' odpoved=''>vaha</vaha>
-            <mobil isKnown='False' odpoved=''>mobil</mobil>
-            <povolani isKnown='False' odpoved=''>povolani</povolani>
-            <vztahKuObeti isKnown='False' odpoved=''>vztahKuObeti</vztahKuObeti>
-        </zakladniudaje>
-        <!-- Udaje zjistene resenim pripadu -->
-        <udajekpripadu>
-            <otiskprstu isKnown='False' odpoved=''>otiskprstu.jpg</otiskprstu>
-            <DNA isKnown='False' odpoved=''>dna.jpg</DNA>
-            <alibi isKnown='False' odpoved=''>alibi</alibi>
-            <jeSvedek isKnown='False' odpoved=''>jeSvedek</jeSvedek>
-        </udajekpripadu>
-        <!---->
-        <!-- Hrac si muze vsechny osoby v pripadu zaradit do ruznych kategorii pro lepsi orientaci v pripadu -->
-        <!---->
-        <stav>
-            <jeZnamy isKnown='False' odpoved=''>True</jeZnamy>
-            <jeHlavniPodezrely isKnown='False' odpoved=''>jeHlavniPodezrely</jeHlavniPodezrely>
-            <jePodezrely isKnown='False' odpoved=''>jePodezrely</jePodezrely>
-            <jeNevinny isKnown='False' odpoved=''>jeNevinny</jeNevinny>
-        </stav>
-        <!---->
-        <!-- Data ke hře. Hráč k nim nemá přístup -->
-        <!---->
-        <data>
-            <color isKnown='False' odpoved=''>a5d6a7</color>
-            <jeObet isKnown='False' odpoved=''>jeObet</jeObet>
-            <jeHledanaOsoba isKnown='False' odpoved=''>jeHledanaOsoba</jeHledanaOsoba>
-            <!---->
-            <!-- Pokud se bude hráč špatně ptát, osoba se může naštvat a odmítne komunikovat na nějakou dobu. -->
-            <!---->
-            <status>
-                <trpelivost isKnown='False' odpoved=''>100</trpelivost>
-            </status>
-        </data>
-        <!---->
-        <!-- Přehled lokací, kde může hráč osobu najít -->
-        <!---->
-        <Lokace>
-            <lokace isKnown='False' odpoved=''>lokace1</lokace>
-        </Lokace>
-        <!---->
-        <!-- Popis osoby ostatními osobami. Pokud bude prázdné, osoba danou osobu není známa -->
-        <!---->
-        <popisOdOstatnich>
-            <popis id='1' isKnown='False' odpoved=''>popis</popis>
-            <popis id='2' isKnown='False' odpoved=''>popis</popis>
-        </popisOdOstatnich>
-    </osoba>
+	<osoba jmeno="Luděk Polák">
+		<!-- ID osoby -->
+		<id>0</id>
+		<!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
+		<zakladniudaje>
+			<fotka isKnown="False" odpoved="">fotka.jpg</fotka>
+			<jmeno isKnown="False" odpoved="">Luděk</jmeno>
+			<prijmeni isKnown="False" odpoved="">Polák</prijmeni>
+			<prezdivka isKnown="False" odpoved="">Luďa</prezdivka>
+			<man isKnown="False" odpoved="">true</man>
+			<datumnarozeni isKnown="False" odpoved="">16.5.1988</datumnarozeni>
+			<jeNazivu isKnown="False" odpoved="">false</jeNazivu>
+			<datumumrti isKnown="False" odpoved="">19.5.2020</datumumrti>
+			<narodnost isKnown="False" odpoved="">Česká</narodnost>
+			<vyska isKnown="False" odpoved="">185</vyska>
+			<vaha isKnown="False" odpoved="">88</vaha>
+			<mobil isKnown="False" odpoved="">730999999</mobil>
+			<povolani isKnown="False" odpoved="">Manažer pobočky McDonalds</povolani>
+			<vztahKuObeti isKnown="False" odpoved="">Oběť</vztahKuObeti>
+		</zakladniudaje>
+		<!-- Udaje zjistene resenim pripadu -->
+		<udajekpripadu>
+			<otiskprstu isKnown="False" odpoved="">otiskprstu.jpg</otiskprstu>
+			<DNA isKnown="False" odpoved="">dna.jpg</DNA>
+			<alibi isKnown="False" odpoved="">alibi</alibi>
+			<jeSvedek isKnown="False" odpoved="">false</jeSvedek>
+		</udajekpripadu>
+		<!-- Hrac si muze vsechny osoby v pripadu zaradit do ruznych kategorii pro lepsi orientaci v pripadu -->
+		<stav>
+			<jeZnamy isKnown="False" odpoved="">false</jeZnamy>
+			<jeHlavniPodezrely isKnown="False" odpoved="">false</jeHlavniPodezrely>
+			<jePodezrely isKnown="False" odpoved="">false</jePodezrely>
+			<jeNevinny isKnown="False" odpoved="">false</jeNevinny>
+		</stav>
+		<!-- Data ke hře. Hráč k nim nemá přístup -->
+		<data>
+			<color isKnown="False" odpoved="">a5d6a7</color>
+			<jeObet isKnown="False" odpoved="">true</jeObet>
+			<jeHledanaOsoba isKnown="False" odpoved="">false</jeHledanaOsoba>
+			<!-- Pokud se bude hráč špatně ptát, osoba se může naštvat a odmítne komunikovat na nějakou dobu. -->
+			<status>
+				<trpelivost isKnown="False" odpoved="">100</trpelivost>
+			</status>
+		</data>
+		<!-- Přehled lokací, kde může hráč osobu najít -->
+		<Lokace />
+		<!-- Popis osoby ostatními osobami. Pokud bude prázdné, osoba danou osobu není známa -->
+		<popisOdOstatnich>
+			<popis id="1" isKnown="False" odpoved="">popis</popis>
+			<popis id="2" isKnown="False" odpoved="">popis</popis>
+		</popisOdOstatnich>
+	</osoba>
+	<osoba jmeno="Petr Hanák">
+		<!-- ID osoby -->
+		<id>1</id>
+		<!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
+		<zakladniudaje>
+			<fotka isKnown="False" odpoved="">fotka.jpg</fotka>
+			<jmeno isKnown="False" odpoved="">Petr</jmeno>
+			<prijmeni isKnown="False" odpoved="">Hanák</prijmeni>
+			<prezdivka isKnown="False" odpoved="">Péťa</prezdivka>
+			<man isKnown="False" odpoved="">true</man>
+			<datumnarozeni isKnown="False" odpoved="">8.1.1995</datumnarozeni>
+			<jeNazivu isKnown="False" odpoved="">true</jeNazivu>
+			<datumumrti isKnown="False" odpoved="">0</datumumrti>
+			<narodnost isKnown="False" odpoved="">Česká</narodnost>
+			<vyska isKnown="False" odpoved="">192</vyska>
+			<vaha isKnown="False" odpoved="">105</vaha>
+			<mobil isKnown="False" odpoved="">730888888</mobil>
+			<povolani isKnown="False" odpoved="">Brigídník v McDonalds</povolani>
+			<vztahKuObeti isKnown="False" odpoved="">Brigádně pracoval pro oběť</vztahKuObeti>
+		</zakladniudaje>
+		<!-- Udaje zjistene resenim pripadu -->
+		<udajekpripadu>
+			<otiskprstu isKnown="False" odpoved="">otiskprstu.jpg</otiskprstu>
+			<DNA isKnown="False" odpoved="">dna.jpg</DNA>
+			<alibi isKnown="False" odpoved="">Byl sám doma a hrál online hry.</alibi>
+			<jeSvedek isKnown="False" odpoved="">false</jeSvedek>
+		</udajekpripadu>
+		<!-- Hrac si muze vsechny osoby v pripadu zaradit do ruznych kategorii pro lepsi orientaci v pripadu -->
+		<stav>
+			<jeZnamy isKnown="False" odpoved="">false</jeZnamy>
+			<jeHlavniPodezrely isKnown="False" odpoved="">false</jeHlavniPodezrely>
+			<jePodezrely isKnown="False" odpoved="">true</jePodezrely>
+			<jeNevinny isKnown="False" odpoved="">false</jeNevinny>
+		</stav>
+		<!-- Data ke hře. Hráč k nim nemá přístup -->
+		<data>
+			<color isKnown="False" odpoved="">b39ddb</color>
+			<jeObet isKnown="False" odpoved="">false</jeObet>
+			<jeHledanaOsoba isKnown="False" odpoved="">true</jeHledanaOsoba>
+			<!-- Pokud se bude hráč špatně ptát, osoba se může naštvat a odmítne komunikovat na nějakou dobu. -->
+			<status>
+				<trpelivost isKnown="False" odpoved="">100</trpelivost>
+			</status>
+		</data>
+		<!-- Přehled lokací, kde může hráč osobu najít -->
+		<Lokace>
+			<lokace isKnown="False" odpoved="">lokace1</lokace>
+		</Lokace>
+		<!-- Popis osoby ostatními osobami. Pokud bude prázdné, osoba danou osobu není známa -->
+		<popisOdOstatnich>
+			<popis id="1" isKnown="False" odpoved="">popis</popis>
+			<popis id="2" isKnown="False" odpoved="">popis</popis>
+		</popisOdOstatnich>
+	</osoba>
+	<osoba jmeno="Alena Tichá">
+		<!-- ID osoby -->
+		<id>2</id>
+		<!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
+		<zakladniudaje>
+			<fotka isKnown="False" odpoved="">fotka.jpg</fotka>
+			<jmeno isKnown="False" odpoved="">Alena</jmeno>
+			<prijmeni isKnown="False" odpoved="">Tichá</prijmeni>
+			<prezdivka isKnown="False" odpoved="">Alča</prezdivka>
+			<man isKnown="False" odpoved="">false</man>
+			<datumnarozeni isKnown="False" odpoved="">29.3.2002</datumnarozeni>
+			<jeNazivu isKnown="False" odpoved="">true</jeNazivu>
+			<datumumrti isKnown="False" odpoved="">0</datumumrti>
+			<narodnost isKnown="False" odpoved="">Česká</narodnost>
+			<vyska isKnown="False" odpoved="">175</vyska>
+			<vaha isKnown="False" odpoved="">65</vaha>
+			<mobil isKnown="False" odpoved="">777444444444</mobil>
+			<povolani isKnown="False" odpoved="">Brigádnice v McDonalds</povolani>
+			<vztahKuObeti isKnown="False" odpoved="">Brigádně pracovala pro oběť</vztahKuObeti>
+		</zakladniudaje>
+		<!-- Udaje zjistene resenim pripadu -->
+		<udajekpripadu>
+			<otiskprstu isKnown="False" odpoved="">otiskprstu.jpg</otiskprstu>
+			<DNA isKnown="False" odpoved="">dna.jpg</DNA>
+			<alibi isKnown="False" odpoved="">Byla s Petrou Novotnou. Po skončení směny šli k Aleně sledovat Marvelovky.</alibi>
+			<jeSvedek isKnown="False" odpoved="">false</jeSvedek>
+		</udajekpripadu>
+		<!-- Hrac si muze vsechny osoby v pripadu zaradit do ruznych kategorii pro lepsi orientaci v pripadu -->
+		<stav>
+			<jeZnamy isKnown="False" odpoved="">false</jeZnamy>
+			<jeHlavniPodezrely isKnown="False" odpoved="">false</jeHlavniPodezrely>
+			<jePodezrely isKnown="False" odpoved="">true</jePodezrely>
+			<jeNevinny isKnown="False" odpoved="">false</jeNevinny>
+		</stav>
+		<!-- Data ke hře. Hráč k nim nemá přístup -->
+		<data>
+			<color isKnown="False" odpoved="">f8bbd0</color>
+			<jeObet isKnown="False" odpoved="">false</jeObet>
+			<jeHledanaOsoba isKnown="False" odpoved="">false</jeHledanaOsoba>
+			<!-- Pokud se bude hráč špatně ptát, osoba se může naštvat a odmítne komunikovat na nějakou dobu. -->
+			<status>
+				<trpelivost isKnown="False" odpoved="">100</trpelivost>
+			</status>
+		</data>
+		<!-- Přehled lokací, kde může hráč osobu najít -->
+		<Lokace>
+			<lokace isKnown="False" odpoved="">lokace1</lokace>
+		</Lokace>
+		<!-- Popis osoby ostatními osobami. Pokud bude prázdné, osoba danou osobu není známa -->
+		<popisOdOstatnich>
+			<popis id="1" isKnown="False" odpoved="">popis</popis>
+			<popis id="2" isKnown="False" odpoved="">popis</popis>
+		</popisOdOstatnich>
+	</osoba>
+	<osoba jmeno="Petra Novotná">
+		<!-- ID osoby -->
+		<id>3</id>
+		<!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
+		<zakladniudaje>
+			<fotka isKnown="False" odpoved="">fotka.jpg</fotka>
+			<jmeno isKnown="False" odpoved="">Petra</jmeno>
+			<prijmeni isKnown="False" odpoved="">Novotná</prijmeni>
+			<prezdivka isKnown="False" odpoved="">Peťka</prezdivka>
+			<man isKnown="False" odpoved="">false</man>
+			<datumnarozeni isKnown="False" odpoved="">11.11.2001</datumnarozeni>
+			<jeNazivu isKnown="False" odpoved="">true</jeNazivu>
+			<datumumrti isKnown="False" odpoved="">0</datumumrti>
+			<narodnost isKnown="False" odpoved="">Česká</narodnost>
+			<vyska isKnown="False" odpoved="">172</vyska>
+			<vaha isKnown="False" odpoved="">66</vaha>
+			<mobil isKnown="False" odpoved="">777333333</mobil>
+			<povolani isKnown="False" odpoved="">Brigádnice v McDonalds</povolani>
+			<vztahKuObeti isKnown="False" odpoved="">Brigádně pracovala pro oběť</vztahKuObeti>
+		</zakladniudaje>
+		<!-- Udaje zjistene resenim pripadu -->
+		<udajekpripadu>
+			<otiskprstu isKnown="False" odpoved="">otiskprstu.jpg</otiskprstu>
+			<DNA isKnown="False" odpoved="">dna.jpg</DNA>
+			<alibi isKnown="False" odpoved="">Byla s Alenou Tichou.  Po skončení směny šli k Aleně sledovat Marvelovky.</alibi>
+			<jeSvedek isKnown="False" odpoved="">false</jeSvedek>
+		</udajekpripadu>
+		<!-- Hrac si muze vsechny osoby v pripadu zaradit do ruznych kategorii pro lepsi orientaci v pripadu -->
+		<stav>
+			<jeZnamy isKnown="False" odpoved="">false</jeZnamy>
+			<jeHlavniPodezrely isKnown="False" odpoved="">false</jeHlavniPodezrely>
+			<jePodezrely isKnown="False" odpoved="">true</jePodezrely>
+			<jeNevinny isKnown="False" odpoved="">false</jeNevinny>
+		</stav>
+		<!-- Data ke hře. Hráč k nim nemá přístup -->
+		<data>
+			<color isKnown="False" odpoved="">ffcdd2</color>
+			<jeObet isKnown="False" odpoved="">false</jeObet>
+			<jeHledanaOsoba isKnown="False" odpoved="">false</jeHledanaOsoba>
+			<!-- Pokud se bude hráč špatně ptát, osoba se může naštvat a odmítne komunikovat na nějakou dobu. -->
+			<status>
+				<trpelivost isKnown="False" odpoved="">100</trpelivost>
+			</status>
+		</data>
+		<!-- Přehled lokací, kde může hráč osobu najít -->
+		<Lokace>
+			<lokace isKnown="False" odpoved="">lokace1</lokace>
+		</Lokace>
+		<!-- Popis osoby ostatními osobami. Pokud bude prázdné, osoba danou osobu není známa -->
+		<popisOdOstatnich>
+			<popis id="1" isKnown="False" odpoved="">popis</popis>
+			<popis id="2" isKnown="False" odpoved="">popis</popis>
+		</popisOdOstatnich>
+	</osoba>
+	<osoba jmeno="Adam Konečný">
+		<!-- ID osoby -->
+		<id>4</id>
+		<!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
+		<zakladniudaje>
+			<fotka isKnown="False" odpoved="">fotka.jpg</fotka>
+			<jmeno isKnown="False" odpoved="">Adam</jmeno>
+			<prijmeni isKnown="False" odpoved="">Konečný</prijmeni>
+			<prezdivka isKnown="False" odpoved="">Konečňák</prezdivka>
+			<man isKnown="False" odpoved="">true</man>
+			<datumnarozeni isKnown="False" odpoved="">23.5.1983</datumnarozeni>
+			<jeNazivu isKnown="False" odpoved="">true</jeNazivu>
+			<datumumrti isKnown="False" odpoved="">0</datumumrti>
+			<narodnost isKnown="False" odpoved="">Česká</narodnost>
+			<vyska isKnown="False" odpoved="">165</vyska>
+			<vaha isKnown="False" odpoved="">80</vaha>
+			<mobil isKnown="False" odpoved="">776111222</mobil>
+			<povolani isKnown="False" odpoved="">Vedoucí směny v McDonalds</povolani>
+			<vztahKuObeti isKnown="False" odpoved="">Kolega a kamarád oběti</vztahKuObeti>
+		</zakladniudaje>
+		<!-- Udaje zjistene resenim pripadu -->
+		<udajekpripadu>
+			<otiskprstu isKnown="False" odpoved="">otiskprstu.jpg</otiskprstu>
+			<DNA isKnown="False" odpoved="">dna.jpg</DNA>
+			<alibi isKnown="False" odpoved="">Toho večera skončil v práci dřív. S manželkou slavili výročí.</alibi>
+			<jeSvedek isKnown="False" odpoved="">false</jeSvedek>
+		</udajekpripadu>
+		<!-- Hrac si muze vsechny osoby v pripadu zaradit do ruznych kategorii pro lepsi orientaci v pripadu -->
+		<stav>
+			<jeZnamy isKnown="False" odpoved="">false</jeZnamy>
+			<jeHlavniPodezrely isKnown="False" odpoved="">false</jeHlavniPodezrely>
+			<jePodezrely isKnown="False" odpoved="">true</jePodezrely>
+			<jeNevinny isKnown="False" odpoved="">false</jeNevinny>
+		</stav>
+		<!-- Data ke hře. Hráč k nim nemá přístup -->
+		<data>
+			<color isKnown="False" odpoved="">c5e1a5</color>
+			<jeObet isKnown="False" odpoved="">false</jeObet>
+			<jeHledanaOsoba isKnown="False" odpoved="">false</jeHledanaOsoba>
+			<!-- Pokud se bude hráč špatně ptát, osoba se může naštvat a odmítne komunikovat na nějakou dobu. -->
+			<status>
+				<trpelivost isKnown="False" odpoved="">100</trpelivost>
+			</status>
+		</data>
+		<!-- Přehled lokací, kde může hráč osobu najít -->
+		<Lokace>
+			<lokace isKnown="False" odpoved="">lokace1</lokace>
+		</Lokace>
+		<!-- Popis osoby ostatními osobami. Pokud bude prázdné, osoba danou osobu není známa -->
+		<popisOdOstatnich>
+			<popis id="1" isKnown="False" odpoved="">popis</popis>
+			<popis id="2" isKnown="False" odpoved="">popis</popis>
+		</popisOdOstatnich>
+	</osoba>
+	<osoba jmeno="Anna Poláková">
+		<!-- ID osoby -->
+		<id>5</id>
+		<!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
+		<zakladniudaje>
+			<fotka isKnown="False" odpoved="">fotka.jpg</fotka>
+			<jmeno isKnown="False" odpoved="">Anna</jmeno>
+			<prijmeni isKnown="False" odpoved="">Poláková</prijmeni>
+			<prezdivka isKnown="False" odpoved="">Annie</prezdivka>
+			<man isKnown="False" odpoved="">false</man>
+			<datumnarozeni isKnown="False" odpoved="">1.9.1996</datumnarozeni>
+			<jeNazivu isKnown="False" odpoved="">true</jeNazivu>
+			<datumumrti isKnown="False" odpoved="">0</datumumrti>
+			<narodnost isKnown="False" odpoved="">Česká</narodnost>
+			<vyska isKnown="False" odpoved="">170</vyska>
+			<vaha isKnown="False" odpoved="">68</vaha>
+			<mobil isKnown="False" odpoved="">771235897</mobil>
+			<povolani isKnown="False" odpoved="">Studentka</povolani>
+			<vztahKuObeti isKnown="False" odpoved="">Manželka oběti</vztahKuObeti>
+		</zakladniudaje>
+		<!-- Udaje zjistene resenim pripadu -->
+		<udajekpripadu>
+			<otiskprstu isKnown="False" odpoved="">otiskprstu.jpg</otiskprstu>
+			<DNA isKnown="False" odpoved="">dna.jpg</DNA>
+			<alibi isKnown="False" odpoved="">Byla doma, učila se, jako většinu večerů.</alibi>
+			<jeSvedek isKnown="False" odpoved="">false</jeSvedek>
+		</udajekpripadu>
+		<!-- Hrac si muze vsechny osoby v pripadu zaradit do ruznych kategorii pro lepsi orientaci v pripadu -->
+		<stav>
+			<jeZnamy isKnown="False" odpoved="">false</jeZnamy>
+			<jeHlavniPodezrely isKnown="False" odpoved="">false</jeHlavniPodezrely>
+			<jePodezrely isKnown="False" odpoved="">true</jePodezrely>
+			<jeNevinny isKnown="False" odpoved="">false</jeNevinny>
+		</stav>
+		<!-- Data ke hře. Hráč k nim nemá přístup -->
+		<data>
+			<color isKnown="False" odpoved="">ef9a9a</color>
+			<jeObet isKnown="False" odpoved="">false</jeObet>
+			<jeHledanaOsoba isKnown="False" odpoved="">false</jeHledanaOsoba>
+			<!-- Pokud se bude hráč špatně ptát, osoba se může naštvat a odmítne komunikovat na nějakou dobu. -->
+			<status>
+				<trpelivost isKnown="False" odpoved="">100</trpelivost>
+			</status>
+		</data>
+		<!-- Přehled lokací, kde může hráč osobu najít -->
+		<Lokace>
+			<lokace isKnown="False" odpoved="">lokace1</lokace>
+		</Lokace>
+		<!-- Popis osoby ostatními osobami. Pokud bude prázdné, osoba danou osobu není známa -->
+		<popisOdOstatnich>
+			<popis id="1" isKnown="False" odpoved="">popis</popis>
+			<popis id="2" isKnown="False" odpoved="">popis</popis>
+		</popisOdOstatnich>
+	</osoba>
+	<osoba jmeno="Emanuel Motýl">
+		<!-- ID osoby -->
+		<id>6</id>
+		<!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
+		<zakladniudaje>
+			<fotka isKnown="False" odpoved="">fotka.jpg</fotka>
+			<jmeno isKnown="False" odpoved="">Emanuel</jmeno>
+			<prijmeni isKnown="False" odpoved="">Motýl</prijmeni>
+			<prezdivka isKnown="False" odpoved="">Emík</prezdivka>
+			<man isKnown="False" odpoved="">true</man>
+			<datumnarozeni isKnown="False" odpoved="">2.2.1993</datumnarozeni>
+			<jeNazivu isKnown="False" odpoved="">true</jeNazivu>
+			<datumumrti isKnown="False" odpoved="">0</datumumrti>
+			<narodnost isKnown="False" odpoved="">Česká</narodnost>
+			<vyska isKnown="False" odpoved="">180</vyska>
+			<vaha isKnown="False" odpoved="">90</vaha>
+			<mobil isKnown="False" odpoved="">778951367</mobil>
+			<povolani isKnown="False" odpoved="">Brigádník na pobočce McDonalds</povolani>
+			<vztahKuObeti isKnown="False" odpoved="">Pracoval pro oběť. Tvrdil, že byli téměř nejlepší kamarádi.</vztahKuObeti>
+		</zakladniudaje>
+		<!-- Udaje zjistene resenim pripadu -->
+		<udajekpripadu>
+			<otiskprstu isKnown="False" odpoved="">otiskprstu.jpg</otiskprstu>
+			<DNA isKnown="False" odpoved="">dna.jpg</DNA>
+			<alibi isKnown="False" odpoved="">Byl sám doma, přítelkyně byla na firemním večírku.</alibi>
+			<jeSvedek isKnown="False" odpoved="">false</jeSvedek>
+		</udajekpripadu>
+		<!-- Hrac si muze vsechny osoby v pripadu zaradit do ruznych kategorii pro lepsi orientaci v pripadu -->
+		<stav>
+			<jeZnamy isKnown="False" odpoved="">false</jeZnamy>
+			<jeHlavniPodezrely isKnown="False" odpoved="">false</jeHlavniPodezrely>
+			<jePodezrely isKnown="False" odpoved="">true</jePodezrely>
+			<jeNevinny isKnown="False" odpoved="">false</jeNevinny>
+		</stav>
+		<!-- Data ke hře. Hráč k nim nemá přístup -->
+		<data>
+			<color isKnown="False" odpoved="">b2dfdb</color>
+			<jeObet isKnown="False" odpoved="">false</jeObet>
+			<jeHledanaOsoba isKnown="False" odpoved="">false</jeHledanaOsoba>
+			<!-- Pokud se bude hráč špatně ptát, osoba se může naštvat a odmítne komunikovat na nějakou dobu. -->
+			<status>
+				<trpelivost isKnown="False" odpoved="">100</trpelivost>
+			</status>
+		</data>
+		<!-- Přehled lokací, kde může hráč osobu najít -->
+		<Lokace>
+			<lokace isKnown="False" odpoved="">lokace1</lokace>
+		</Lokace>
+		<!-- Popis osoby ostatními osobami. Pokud bude prázdné, osoba danou osobu není známa -->
+		<popisOdOstatnich>
+			<popis id="1" isKnown="False" odpoved="">popis</popis>
+			<popis id="2" isKnown="False" odpoved="">popis</popis>
+		</popisOdOstatnich>
+	</osoba>
+	<osoba jmeno="Josef Škaredý">
+		<!-- ID osoby -->
+		<id>7</id>
+		<!-- Zakladni udaje o osobe, které se při hraní nemění. Hráč je může kdykoliv zjistit otázkou. -->
+		<zakladniudaje>
+			<fotka isKnown="False" odpoved="">fotka.jpg</fotka>
+			<jmeno isKnown="False" odpoved="">Josef</jmeno>
+			<prijmeni isKnown="False" odpoved="">Škaredý</prijmeni>
+			<prezdivka isKnown="False" odpoved="">Pepouš</prezdivka>
+			<man isKnown="False" odpoved="">true</man>
+			<datumnarozeni isKnown="False" odpoved="">26.6.1969</datumnarozeni>
+			<jeNazivu isKnown="False" odpoved="">true</jeNazivu>
+			<datumumrti isKnown="False" odpoved="">0</datumumrti>
+			<narodnost isKnown="False" odpoved="">Česká</narodnost>
+			<vyska isKnown="False" odpoved="">180</vyska>
+			<vaha isKnown="False" odpoved="">82</vaha>
+			<mobil isKnown="False" odpoved="">748952365</mobil>
+			<povolani isKnown="False" odpoved="">Majitel společnosti LeadMoney</povolani>
+			<vztahKuObeti isKnown="False" odpoved="">Spolupracoval s obětí v LeadMoney.</vztahKuObeti>
+		</zakladniudaje>
+		<!-- Udaje zjistene resenim pripadu -->
+		<udajekpripadu>
+			<otiskprstu isKnown="False" odpoved="">otiskprstu.jpg</otiskprstu>
+			<DNA isKnown="False" odpoved="">dna.jpg</DNA>
+			<alibi isKnown="False" odpoved="">Prý je workoholik, takže byl v kanceláři.</alibi>
+			<jeSvedek isKnown="False" odpoved="">false</jeSvedek>
+		</udajekpripadu>
+		<!-- Hrac si muze vsechny osoby v pripadu zaradit do ruznych kategorii pro lepsi orientaci v pripadu -->
+		<stav>
+			<jeZnamy isKnown="False" odpoved="">false</jeZnamy>
+			<jeHlavniPodezrely isKnown="False" odpoved="">false</jeHlavniPodezrely>
+			<jePodezrely isKnown="False" odpoved="">true</jePodezrely>
+			<jeNevinny isKnown="False" odpoved="">false</jeNevinny>
+		</stav>
+		<!-- Data ke hře. Hráč k nim nemá přístup -->
+		<data>
+			<color isKnown="False" odpoved="">bcaaa4</color>
+			<jeObet isKnown="False" odpoved="">false</jeObet>
+			<jeHledanaOsoba isKnown="False" odpoved="">false</jeHledanaOsoba>
+			<!-- Pokud se bude hráč špatně ptát, osoba se může naštvat a odmítne komunikovat na nějakou dobu. -->
+			<status>
+				<trpelivost isKnown="False" odpoved="">100</trpelivost>
+			</status>
+		</data>
+		<!-- Přehled lokací, kde může hráč osobu najít -->
+		<Lokace>
+			<lokace isKnown="False" odpoved="">lokace1</lokace>
+		</Lokace>
+		<!-- Popis osoby ostatními osobami. Pokud bude prázdné, osoba danou osobu není známa -->
+		<popisOdOstatnich>
+			<popis id="1" isKnown="False" odpoved="">popis</popis>
+			<popis id="2" isKnown="False" odpoved="">popis</popis>
+		</popisOdOstatnich>
+	</osoba>
 </osoby>

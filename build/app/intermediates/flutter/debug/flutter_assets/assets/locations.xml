@@ -6,8 +6,8 @@
         <isKnown>true</isKnown>
         <name>lokace jedna</name>
         <description>description</description>
-        <lat>49.19550392304932</lat>
-        <long>16.608693683536544</long>
+        <lat>49.195481510286946</lat>
+        <long>16.60872890372986</long>
         <keyword>keyword1</keyword>
         <keyword>keyword2</keyword>
         <keyword>keyword3</keyword>
@@ -20,11 +20,11 @@
     <location>
         <!-- ID lokace -->
         <id>id=0</id>
-        <isKnown>false</isKnown>
+        <isKnown>true</isKnown>
         <name>lokace dva</name>
         <description>description</description>
-        <lat>49.1947882</lat>
-        <long>16.608075</long>
+        <lat>49.194901339765295</lat>
+        <long>16.60836278219933</long>
         <keyword>keyword1</keyword>
         <keyword>keyword2</keyword>
         <keyword>keyword3</keyword>

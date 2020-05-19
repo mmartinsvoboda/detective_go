@@ -94,7 +94,11 @@ class _MainPageState extends State<MainPage> {
                       padding: const EdgeInsets.all(8.0),
                       child: GestureDetector(
                         onTap: () {
-                          print(gameManager.locations[index].name);
+                          for (String char
+                              in gameManager.locations[index].character) {
+                            print(gameManager
+                                .characters[int.parse(char)].jmeno.value);
+                          }
                         },
                         child: Card(
                           elevation: 5,
@@ -103,8 +107,7 @@ class _MainPageState extends State<MainPage> {
                               height: 50,
                               child: Center(
                                 child: Text(
-                                  gameManager.locations[index].keyword.length
-                                      .toString(),
+                                  gameManager.locations[index].name.toString(),
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontStyle: FontStyle.normal,

@@ -1,38 +1,81 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <locations>
-    <location>
-        <!-- ID lokace -->
-        <id>id=0</id>
-        <isKnown>true</isKnown>
-        <name>lokace jedna</name>
-        <description>description</description>
-        <lat>49.195481510286946</lat>
-        <long>16.60872890372986</long>
-        <keyword>keyword1</keyword>
-        <keyword>keyword2</keyword>
-        <keyword>keyword3</keyword>
-        <keyword>keyword4</keyword>
-        <keyword>keyword5</keyword>
-        <character>character1</character>
-        <character>character2</character>
-        <character>character3</character>
-    </location>
-    <location>
-        <!-- ID lokace -->
-        <id>id=0</id>
-        <isKnown>true</isKnown>
-        <name>lokace dva</name>
-        <description>description</description>
-        <lat>49.194901339765295</lat>
-        <long>16.60836278219933</long>
-        <keyword>keyword1</keyword>
-        <keyword>keyword2</keyword>
-        <keyword>keyword3</keyword>
-        <keyword>keyword4</keyword>
-        <keyword>keyword5</keyword>
-        <character>character1</character>
-        <character>character2</character>
-        <character>character3</character>
-    </location>
-
+	<location name="McDonalds">
+		<!-- ID lokace -->
+		<id>0</id>
+		<isKnown>true</isKnown>
+		<name>Pobočka McDonalds</name>
+		<description>Místo vraždy, pobočka McDonalds na náměstí Svobody.</description>
+		<lat>49.19474534109259</lat>
+		<long>16.607850480277484</long>
+		<keyword>mcdonalds</keyword>
+		<character>999</character>
+		<character>4</character>
+	</location>
+	<location name="Domov Petra Hanáka">
+		<!-- ID lokace -->
+		<id>1</id>
+		<isKnown>true</isKnown>
+		<name>Byt Petra Hanáka</name>
+		<description>Byt, kde bydlí Petr Hanák s jeho přítelkyní.</description>
+		<lat>49.19543533488245</lat>
+		<long>16.60723399014686</long>
+		<keyword>petr hanak</keyword>
+		<character>1</character>
+	</location>
+	<location name="Byt Aleny Tiché">
+		<!-- ID lokace -->
+		<id>2</id>
+		<isKnown>true</isKnown>
+		<name>Byt Aleny Tiché</name>
+		<description>Byt, kde bydlí Alena Tichá a její spolubydlící.</description>
+		<lat>49.194193339130855</lat>
+		<long>16.60901534008306</long>
+		<keyword>alena ticha</keyword>
+		<character>2</character>
+	</location>
+	<location name="Byt Petry Novotné">
+		<!-- ID lokace -->
+		<id>3</id>
+		<isKnown>true</isKnown>
+		<name>Byt Petry Novotné</name>
+		<description>Byt, kde bydlí Petra Novotná</description>
+		<lat>49.194260113889214</lat>
+		<long>16.60850103063691</long>
+		<keyword>petra novotna</keyword>
+		<character>3</character>
+	</location>
+	<location name="Byt oběti">
+		<!-- ID lokace -->
+		<id>4</id>
+		<isKnown>true</isKnown>
+		<name>Byt oběti</name>
+		<description>Byt, kde bydlela oběť s jeho manželkou.</description>
+		<lat>49.19489669539317</lat>
+		<long>16.608967655763806</long>
+		<keyword>ludek polak anna polakova</keyword>
+		<character>5</character>
+	</location>
+	<location name="Byt Emanuela Motýla">
+		<!-- ID lokace -->
+		<id>5</id>
+		<isKnown>true</isKnown>
+		<name>Byt Emanuela Motýla</name>
+		<description>Byt Emanuela Motýla</description>
+		<lat>49.195408625624545</lat>
+		<long>16.609209483384177</long>
+		<keyword>emanuel motyl</keyword>
+		<character>6</character>
+	</location>
+	<location name="Společnost LeadMoney">
+		<!-- ID lokace -->
+		<id>6</id>
+		<isKnown>true</isKnown>
+		<name>Společnost LeadMoney</name>
+		<description>Finančně-poradenská společnost, kde pomáhala oběť</description>
+		<lat>49.19555552636476</lat>
+		<long>16.60826601506247</long>
+		<keyword>leadmoney josef pepa skaredy</keyword>
+		<character>7</character>
+	</location>
 </locations>

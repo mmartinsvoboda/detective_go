@@ -1,4 +1,4 @@
-#Tue May 19 16:06:40 CEST 2020
+#Tue May 19 22:22:19 CEST 2020
 base.0=C\:\\Users\\Svoby\\AndroidStudioProjects\\detective_go\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
