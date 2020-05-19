@@ -16,13 +16,8 @@ class _MapPageState extends State<MapPage> {
   Marker currentLocationMarker = Marker(
       width: 45.0,
       height: 45.0,
-      //point: LatLng(0, 0),
       builder: (context) => Container(
-            child: IconButton(
-                icon: Icon(Icons.home),
-                onPressed: () {
-                  print('Marker tapped!');
-                }),
+            child: IconButton(icon: Icon(Icons.my_location), onPressed: () {}),
           ));
   List<Marker> markers = [];
   LocationData currentLocation;
@@ -53,7 +48,7 @@ class _MapPageState extends State<MapPage> {
         data: Theme.of(context).copyWith(highlightColor: Colors.blueAccent),
         child: Scaffold(
           floatingActionButton: FloatingActionButton(
-            elevation: 10,
+            elevation: 2,
             backgroundColor: Colors.white,
             onPressed: () {
               if (inventoryIsOpened) {
@@ -120,39 +115,26 @@ class _MapPageState extends State<MapPage> {
         }
 
         markers.add(Marker(
-            width: loc.isKnown ? 45.0 : 0,
-            height: loc.isKnown ? 45.0 : 0,
             point: LatLng(double.parse(loc.lat), double.parse(loc.long)),
-            builder: (context) => Container(
-                  child: IconButton(
-                      icon: Icon(Icons.person_pin_circle,
-                          color: closeEnough ? Colors.green : Colors.grey),
-                      iconSize: loc.isKnown ? 30 : 0,
-                      onPressed: () {
-                        if (closeEnough &&
-                            !inventoryIsOpened &&
-                            !locationIsOpened) {
-                          activeLocation = loc;
-                          locationIsOpened = true;
-                          setState(() {});
-                        }
-                      }),
-                )));
+            builder: (context) => IconButton(
+                icon: Icon(Icons.person_pin_circle,
+                    color: closeEnough ? Colors.green : Colors.grey),
+                iconSize: loc.isKnown ? 30 : 0,
+                onPressed: () {
+                  if (closeEnough && !inventoryIsOpened && !locationIsOpened) {
+                    activeLocation = loc;
+                    locationIsOpened = true;
+                    setState(() {});
+                  }
+                })));
       }
 
       markers.add(Marker(
-          width: 0.0,
-          height: 0.0,
-          point: pinPosition,
-          builder: (context) => GestureDetector(
-                onTap: () {
-                  print("tapped");
-                },
-                child: Container(
-                  child: IconButton(
-                      icon: Icon(Icons.person), iconSize: 25, onPressed: () {}),
-                ),
-              )));
+        point: pinPosition,
+        builder: (context) => Container(
+          child: Icon(Icons.my_location),
+        ),
+      ));
     });
   }
 
@@ -172,7 +154,7 @@ class _MapPageState extends State<MapPage> {
             ),
             Text(
               "INVENTÁŘ",
-              style: TextStyle(fontSize: 25),
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
             SizedBox(
               height: 18,
@@ -265,8 +247,10 @@ class _MapPageState extends State<MapPage> {
               height: 20,
             ),
             Text(
-              activeLocation == null ? "lokace" : activeLocation.name,
-              style: TextStyle(fontSize: 25),
+              activeLocation == null
+                  ? "lokace"
+                  : activeLocation.name.toString().toUpperCase(),
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
             SizedBox(
               height: 18,
@@ -321,7 +305,10 @@ class _MapPageState extends State<MapPage> {
           child: Text(
             'Záhada krvavého cheeseburgeru'.toUpperCase(),
             style: TextStyle(
-                color: Colors.black, letterSpacing: 1.2, fontSize: 18),
+                color: Colors.black,
+                letterSpacing: 1.2,
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
           ),
         ),
         decoration: BoxDecoration(

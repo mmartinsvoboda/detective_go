@@ -22,8 +22,8 @@ class _RunDialogueState extends State<RunDialogue> {
         automaticallyImplyLeading: false,
         elevation: 0,
         title: Center(
-          child: Text(gameManager
-              .characters[int.parse(widget.dialogue.assign[0])].jmeno.value),
+          child: Text(
+              "${gameManager.characters[int.parse(widget.dialogue.assign[0])].jmeno.value.toString().toUpperCase()} ${gameManager.characters[int.parse(widget.dialogue.assign[0])].prijmeni.value.toString().toUpperCase()}"),
         ),
       ),
       body: GestureDetector(
@@ -40,7 +40,21 @@ class _RunDialogueState extends State<RunDialogue> {
         child: Container(
           child: Column(
             children: <Widget>[
-              Text(widget.dialogue.desctiption),
+              Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(top: 12),
+                    child: Text(widget.dialogue.desctiption),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50),
+                    child: Divider(
+                      thickness: 1,
+                      color: Colors.black,
+                    ),
+                  )
+                ],
+              ),
               Expanded(
                 child: ListView.builder(
                   itemCount: i,
@@ -52,41 +66,45 @@ class _RunDialogueState extends State<RunDialogue> {
                         : gameManager.characters[charIndex].jmeno.value;
                     String line =
                         widget.dialogue.text[index].toString().split(":")[1];
-
                     bool isDetective = charIndex == 999 ? true : false;
 
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: Colors.greenAccent,
-                        borderRadius: isDetective
-                            ? BorderRadius.only(
-                                topLeft: Radius.circular(15.0),
-                                bottomLeft: Radius.circular(15.0),
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.greenAccent,
+                          borderRadius: BorderRadius.all(Radius.circular(19)),
+                        ),
+                        margin: isDetective
+                            ? EdgeInsets.only(
+                                top: 8.0,
+                                bottom: 8.0,
+                                left: 80.0,
                               )
-                            : BorderRadius.only(
-                                topRight: Radius.circular(15.0),
-                                bottomRight: Radius.circular(15.0),
+                            : EdgeInsets.only(
+                                top: 8.0,
+                                bottom: 8.0,
+                                right: 80.0,
                               ),
-                      ),
-                      margin: isDetective
-                          ? EdgeInsets.only(
-                              top: 8.0,
-                              bottom: 8.0,
-                              left: 80.0,
-                            )
-                          : EdgeInsets.only(
-                              top: 8.0,
-                              bottom: 8.0,
-                              right: 80.0,
-                            ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Text(charName),
-                            Text(line),
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 15),
+                          child: Column(
+                            crossAxisAlignment: isDetective
+                                ? CrossAxisAlignment.end
+                                : CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                charName,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w400, fontSize: 11),
+                              ),
+                              SizedBox(
+                                height: 2,
+                              ),
+                              Text(line),
+                            ],
+                          ),
                         ),
                       ),
                     );
