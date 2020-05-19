@@ -3,11 +3,28 @@
     <location>
         <!-- ID lokace -->
         <id>id=0</id>
-        <isKnown>isKnown</isKnown>
+        <isKnown>true</isKnown>
         <name>lokace jedna</name>
         <description>description</description>
         <lat>49.19550392304932</lat>
         <long>16.608693683536544</long>
+        <keyword>keyword1</keyword>
+        <keyword>keyword2</keyword>
+        <keyword>keyword3</keyword>
+        <keyword>keyword4</keyword>
+        <keyword>keyword5</keyword>
+        <character>character1</character>
+        <character>character2</character>
+        <character>character3</character>
+    </location>
+    <location>
+        <!-- ID lokace -->
+        <id>id=0</id>
+        <isKnown>true</isKnown>
+        <name>lokace dva</name>
+        <description>description</description>
+        <lat>49.1947882</lat>
+        <long>16.608075</long>
         <keyword>keyword1</keyword>
         <keyword>keyword2</keyword>
         <keyword>keyword3</keyword>

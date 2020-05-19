@@ -10,7 +10,6 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
   void wait() async {
     await gameManager.initialize();
-    await Future.delayed(Duration(seconds: 1));
     Navigator.pushReplacementNamed(context, '/home');
   }
 
@@ -22,15 +21,13 @@ class _LoadingState extends State<Loading> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Detective Go',
-      home: Scaffold(
-        body: Center(
-            child: SpinKitRotatingCircle(
-          color: Colors.blueAccent,
-          size: 150,
-        )),
-      ),
+    return SafeArea(
+      child: Scaffold(
+          body: Center(
+              child: SpinKitRotatingCircle(
+        color: Colors.blueAccent,
+        size: 150,
+      ))),
     );
   }
 }
